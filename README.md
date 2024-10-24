@@ -1,4 +1,5 @@
 # base_de_datos
+
 ## 0. Actualizar la lista de versiones de las librerias del sistema operativo
 
 Actualiza las lista de versionees de librerias del sistema operativo
@@ -80,6 +81,8 @@ pip install "fastapi[standard]"
 bash
 sudo apt install mysql-server
 
+sudo service mysql start
+
 
 ## 9. Crear el archivo requirements.txt
 
@@ -113,22 +116,6 @@ git commit -m "UPDATED"
 git push -u origin main
 
 
-
-## 1.1 Iniciar el servidor de Mysql
-´´
-    sudo mysql -u root
-´´
-# 2. Actualizar librerias de Python 
-´´
-    pip install mysql
-´´
-## 2.1 Iniciar MySql como root
-´´ 
-sudo mysql -u root
-´´
-
-
- sudo service mysql start
 
 
 
