@@ -21,3 +21,11 @@ INSERT INTO personas (nombre, primer_apellido, segundo_apellido, email, telefono
 ('María', 'López', 'Martínez', 'maria.lopez@example.com', '987654321'),
 ('Carlos', 'González', 'Sánchez', 'carlos.gonzalez@example.com', '456123789');
 SELECT * FROM personas;
+-- Crear un nuevo usuario en MySQL
+CREATE USER 'perlita'@'localhost' IDENTIFIED BY '12345';
+
+-- Otorgar permisos para acceder a la base de datos "agenda"
+GRANT ALL PRIVILEGES ON agenda.* TO 'perlita'@'localhost';
+
+-- Aplicar cambios de permisos
+FLUSH PRIVILEGES;

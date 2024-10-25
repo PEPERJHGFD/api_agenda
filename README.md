@@ -115,6 +115,7 @@ git add .
 git commit -m "UPDATED"
 git push -u origin main
 
+mysql -u perlita -p -h localhost agenda
 
 
 
