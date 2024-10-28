@@ -100,8 +100,8 @@ python3 -V > runtime
 
 ## 12. Ejecutar el servidor
 
-bash
-sudo mysql -u root
+bashsudo mysql -u root
+
 
 
 bash
@@ -115,9 +115,17 @@ git add .
 git commit -m "UPDATED"
 git push -u origin main
 
-mysql -u perlita -p -h localhost agenda
+mysql -u perlita -p -h 127.0.0.1 agenda
 
 
+ mysql -u root -p 12345
+ sudo chown mysql:mysql /var/run/mysqld/mysqld.sock
+sudo chmod 660 /var/run/mysqld/mysqld.sock
+sudo chown -R mysql:mysql /var/run/mysqld
+sudo chmod -R 755 /var/run/mysqld
+sudo service mysql restart
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '12345';
+FLUSH PRIVILEGES
 
 
 
