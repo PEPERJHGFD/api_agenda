@@ -126,6 +126,7 @@ sudo chmod -R 755 /var/run/mysqld
 sudo service mysql restart
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '12345';
 FLUSH PRIVILEGES
+pip install mysql-connector-python
 
 
 
