@@ -115,18 +115,38 @@ git add .
 git commit -m "UPDATED"
 git push -u origin main
 
-mysql -u perlita -p -h 127.0.0.1 agenda
-
-
- mysql -u root -p 12345
+## 14. Permisos 
+´´
  sudo chown mysql:mysql /var/run/mysqld/mysqld.sock
 sudo chmod 660 /var/run/mysqld/mysqld.sock
 sudo chown -R mysql:mysql /var/run/mysqld
 sudo chmod -R 755 /var/run/mysqld
-sudo service mysql restart
+sudo service mysql restart´
+´´
+## 14. Darle permisos al usuario´
+''
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '12345';
 FLUSH PRIVILEGES
+''
+## 15. Para  conectar con la base de datos y python 
+´´
 pip install mysql-connector-python
+´´´
+# Models
+´´
+Endpoints -> cliente
+1.-Desccription: Endpoint que muestra todos los registros 
+2.-Sumary: Muestra todos los registros 
+3.-Method:GET
+4.-Endpoint: http://localhost:800/v1/personas
+5.-Authentication: NA
+6.-Query params: NA
+7.-Path params: /personas/
+8.-ata: NA
+10.-Status code: 202
+11.-Response type
+
+
 
 
 
