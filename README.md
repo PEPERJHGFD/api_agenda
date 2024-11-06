@@ -134,7 +134,114 @@ pip install mysql-connector-python
 ´´´
 # Models
 ´´
-Endpoints -> cliente
+Todos los registros 
+´´
+|No|Atributo|Descripcion|
+|--|---|---|
+|1|Description|Regresar todos los registros|
+|2.|Summary|Todos los registros de tabla perssonas|
+|3.|Method|GET|
+|4.|Endpoint|htpp://localhost:800/v1/personas|
+|5.|Authentication|NA|
+|6.|Query params|NA|
+|7.|Path params|NA|
+|8.|Data|NA|
+|9.|Status code|202|
+|10.|Response Type|Application/json|
+|11.|Response|{"personas" : [{"id_persona", "nombre", "primer_apellido", "segundo_apellido", "email", "telefono"}]}|
+|12.|Error status code|501|
+|13.|Error response type|application/json|
+|14.|Error response|{"message" : "Error en la BD"}|
+|15.|CURL|-X GET http://localhost:8000/v1/personas|
+
+´´
+Buscar un registro ID
+´´
+
+|No|Atributo|Descripcion|
+|--|---|---|
+|1|Description|Buscar un registro por ID|
+|2.|Summary|Buscar un registro en la tabla personas por ID|
+|3.|Method|GET|
+|4.|Endpoint|htpp://localhost:800/v1/personas/id_personas|
+|5.|Authentication|NA|
+|6.|Query params|NA|
+|7.|Path params|{id_persona}|
+|8.|Data|NA|
+|9.|Status code|202|
+|10.|Response Type|Application/json|
+|11.|Response|{"personas" : [{"id_persona", "nombre", "primer_apellido", "segundo_apellido", "email", "telefono"}]}|
+|12.|Error status code|501|
+|13.|Error response type|application/json|
+|14.|Error response|{"message" : "Error en la BD"}|
+|15.|CURL|-X GET http://localhost:8000/v1/personas/1|
+
+|No|Atributo|Descripcion|
+|--|---|---|
+|1|Description|Insertar datos |
+|2.|Summary|Insertar datos a la tabla personas|
+|3.|Method|POST|
+|4.|Endpoint|htpp://localhost:800/v1/personas|
+|5.|Authentication|NA|
+|6.|Query params|NA|
+|7.|Path params|NA|
+|8.|Data|{"nombre" : str, "primer_apellido":str, "segundo_apellido":str, "email":str, "telefono":str }|
+|9.|Status code|202|
+|10.|Response Type|Application/json|
+|11.|Response|{"message": "Registro insertado"}|
+|12.|Error status code|501|
+|13.|Error response type|application/json|
+|14.|Error response|{"message" : "Error en la BD"}|
+|15.|CURL|-X POST http://localhost:8000/v1/personas/id_personas -d {"nombre" : str, "primer_apellido":str, "segundo_apellido":str, "email":str, "telefono":str }|
+
+´´
+Enviar datos
+´´
+
+|No|Atributo|Descripcion|
+|--|---|---|
+|1|Description|Enviar datos a corregir |
+|2.|Summary|Enviar datos a corregir de la tabla personas|
+|3.|Method|PUT|
+|4.|Endpoint|htpp://localhost:800/v1/personas|
+|5.|Authentication|NA|
+|6.|Query params|NA|
+|7.|Path params|{id_persona}|
+|8.|Data|{"nombre" : str, "primer_apellido":str, "segundo_apellido":str, "email":str, "telefono":str }|
+|9.|Status code|202|
+|10.|Response Type|Application/json|
+|11.|Response|{"message": "Registro actualizado/corregido"}|
+|12.|Error status code|501|
+|13.|Error response type|application/json|
+|14.|Error response|{"message" : "Error en la BD"}|
+|15.|CURL|-X PUT http://localhost:8000/v1/personas/id_personas -d {"nombre" : str, "primer_apellido":str, "segundo_apellido":str, "email":str, "telefono":str }|
+
+´´
+Enviar datos a corregir
+''
+
+|No|Atributo|Descripcion|
+|--|---|---|
+|1|Description|Borrar registro |
+|2.|Summary|Borrar registro por id en la tablaas personas |
+|3.|Method|DELETE|
+|4.|Endpoint|htpp://localhost:800/v1/personas/id_personas|
+|5.|Authentication|NA|
+|6.|Query params|NA|
+|7.|Path params|{id_persona}|
+|8.|Data|NA|
+|9.|Status code|202|
+|10.|Response Type|Application/json|
+|11.|Response|{"message": "Registro eliminado exitosamente"}|
+|12.|Error status code|501|
+|13.|Error response type|application/json|
+|14.|Error response|{"message" : "Error en la BD"}|
+|15.|CURL|-X DELETE http://localhost:8000/v1/personas/id_personas
+
+´´
+Enviar el identificador a borrar
+´´
+
 1.-Desccription: Endpoint que muestra todos los registros 
 2.-Sumary: Muestra todos los registros 
 3.-Method:GET
