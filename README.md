@@ -170,11 +170,14 @@ Buscar un registro ID
 |8.|Data|NA|
 |9.|Status code|202|
 |10.|Response Type|Application/json|
-|11.|Response|{"personas" : [{"id_persona", "nombre", "primer_apellido", "segundo_apellido", "email", "telefono"}]}|
+|11.|Response|{"personas" : [<pre>{<br> "personas": [<br>             { <br>             "id_persona": " ",<br>             "nombre": " ",<br>             "primer_apellido": " ", <br>             "segundo_apellido": " ", <br>             "email": " ",<br>             "telefono": " " <br>             }<br>             ]<br>             }]}|
 |12.|Error status code|501|
 |13.|Error response type|application/json|
 |14.|Error response|{"message" : "Error en la BD"}|
 |15.|CURL|-X GET http://localhost:8000/v1/personas/1|
+´´
+Enviar datos
+´´
 
 |No|Atributo|Descripcion|
 |--|---|---|
@@ -185,19 +188,15 @@ Buscar un registro ID
 |5.|Authentication|NA|
 |6.|Query params|NA|
 |7.|Path params|NA|
-|8.|Data|{"nombre" : str, "primer_apellido":str, "segundo_apellido":str, "email":str, "telefono":str }|
-|9.|Status code|202|
-|10.|Response Type|Application/json|
-|11.|Response|{"message": "Registro insertado"}|
-|12.|Error status code|501|
+|8.|Data|<pre>{<br> "personas": [<br>             { <br>             "id_persona": " ",<br>             "nombre": " ",<br>             "primer_apellido": " ", <br>             "segundo_apellido": " ", <br>             "email": " ",<br>             "telefono": " " <br>             }<br>             ]<br>             }|
 |13.|Error response type|application/json|
 |14.|Error response|{"message" : "Error en la BD"}|
-|15.|CURL|-X POST http://localhost:8000/v1/personas/id_personas -d {"nombre" : str, "primer_apellido":str, "segundo_apellido":str, "email":str, "telefono":str }|
+|15.|CURL|-X POST http://localhost:8000/v1/personas/id_personas -d<pre>{<br> "personas": [<br>             { <br>             "id_persona": " ",<br>             "nombre": " ",<br>             "primer_apellido": " ", <br>             "segundo_apellido": " ", <br>             "email": " ",<br>             "telefono": " " <br>             }|<br>             ]<br>             }
+
 
 ´´
-Enviar datos
-´´
-
+Enviar datos a corregir
+''
 |No|Atributo|Descripcion|
 |--|---|---|
 |1|Description|Enviar datos a corregir |
@@ -207,18 +206,17 @@ Enviar datos
 |5.|Authentication|NA|
 |6.|Query params|NA|
 |7.|Path params|{id_persona}|
-|8.|Data|{"nombre" : str, "primer_apellido":str, "segundo_apellido":str, "email":str, "telefono":str }|
-|9.|Status code|202|
+|8.|Data|<pre>{<br> "personas": [<br>             { <br>             "id_persona": " ",<br>             "nombre": " ",<br>             "primer_apellido": " ", <br>             "segundo_apellido": " ", <br>             "email": " ",<br>             "telefono": " " <br>             }<br>             ]<br>             }
 |10.|Response Type|Application/json|
 |11.|Response|{"message": "Registro actualizado/corregido"}|
 |12.|Error status code|501|
 |13.|Error response type|application/json|
 |14.|Error response|{"message" : "Error en la BD"}|
-|15.|CURL|-X PUT http://localhost:8000/v1/personas/id_personas -d {"nombre" : str, "primer_apellido":str, "segundo_apellido":str, "email":str, "telefono":str }|
+|15.|CURL|-X PUT http://localhost:8000/v1/personas/id_personas -d <pre>{<br> "personas": [<br>             { <br>             "id_persona": " ",<br>             "nombre": " ",<br>             "primer_apellido": " ", <br>             "segundo_apellido": " ", <br>             "email": " ",<br>             "telefono": " " <br>             }<br>             ]<br>             }
 
 ´´
-Enviar datos a corregir
-''
+Enviar el identificador a borrar
+´´
 
 |No|Atributo|Descripcion|
 |--|---|---|
@@ -237,25 +235,6 @@ Enviar datos a corregir
 |13.|Error response type|application/json|
 |14.|Error response|{"message" : "Error en la BD"}|
 |15.|CURL|-X DELETE http://localhost:8000/v1/personas/id_personas
-
-´´
-Enviar el identificador a borrar
-´´
-
-1.-Desccription: Endpoint que muestra todos los registros 
-2.-Sumary: Muestra todos los registros 
-3.-Method:GET
-4.-Endpoint: http://localhost:800/v1/personas
-5.-Authentication: NA
-6.-Query params: NA
-7.-Path params: /personas/
-8.-ata: NA
-10.-Status code: 202
-11.-Response type
-
-
-
-
 
 
  |ATRIBUTO|Campo|
