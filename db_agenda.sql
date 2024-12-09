@@ -22,6 +22,25 @@ INSERT INTO personas (nombre, primer_apellido, segundo_apellido, email, telefono
 ('María', 'López', 'Martínez', 'maria.lopez@example.com', '987654321'),
 ('Carlos', 'González', 'Sánchez', 'carlos.gonzalez@example.com', '456123789');
 
+CREATE TABLE usuarios (
+  id_usuario INT NOT NULL AUTO_INCREMENT,
+  username VARCHAR(50) NOT NULL,
+  full_name VARCHAR(100) NOT NULL,
+  email VARCHAR(100) NOT NULL,
+  hashed_password VARCHAR(50) NOT NULL,
+  disabled BOOLEAN NOT NULL,
+  token VARCHAR(50) NOT NULL,
+  PRIMARY KEY (id_usuario)
+);
+
+-- Insertar registros en la tabla "usuarios"
+INSERT INTO usuarios (username, full_name, email, hashed_password, disabled, token) VALUES
+('juan', 'Juan Pérez', 'juan.perez@example.com', '12345', FALSE, 'juanToken'),
+('Maria', 'Maria Lopez', 'john@email.com', '67890', TRUE, 'mariaToken');
+
+-- Consultar la tabla "usuarios"
+SELECT * FROM usuarios;
+
 -- Consultar la tabla "personas"
 SELECT * FROM personas;
 
