@@ -35,8 +35,8 @@ CREATE TABLE usuarios (
 
 -- Insertar registros en la tabla "usuarios"
 INSERT INTO usuarios (username, full_name, email, hashed_password, disabled, token) VALUES
-('juan', 'Juan Pérez', 'juan.perez@example.com', '12345', FALSE, 'juanToken'),
-('Maria', 'Maria Lopez', 'john@email.com', '67890', TRUE, 'mariaToken');
+('juan', 'Juan Pérez', 'juan.perez@example.com', md5('12345'), FALSE, 'juanToken'),
+('Maria', 'Maria Lopez', 'john@email.com', md5('67890'), TRUE, 'mariaToken');
 
 -- Consultar la tabla "usuarios"
 SELECT * FROM usuarios;
